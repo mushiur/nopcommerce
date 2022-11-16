@@ -6,6 +6,7 @@ from pageObject.openBrowser import OpenBrowser
 from pageObject.register import Register
 from pageObject.login import Login
 from pageObject.search import Search
+from pageObject.shoppingCart import shoppingCart
 
 
 class TestFullCycle(unittest.TestCase):
@@ -41,6 +42,12 @@ class TestFullCycle(unittest.TestCase):
         search = Search(self.x)
         search.search_box()
         search.choose_product()
+
+    def test_5(self):
+        cart = shoppingCart(self.x)
+        cart.enter_text()
+        cart.add_cart()
+        cart.shopping_cart()
 
     if __name__ == '__main__':
         unittest.main()
