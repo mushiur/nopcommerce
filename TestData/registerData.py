@@ -1,7 +1,7 @@
-# first name and last name
 import secrets
-import string
-from random import random
+
+# first name and last name
+
 
 firstName = "Rifat"
 lastName = "Rahman"

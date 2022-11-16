@@ -10,7 +10,7 @@ class Register:
         self.driver.find_element("xpath", "//a[@class = 'ico-register']").click()
 
     def gender(self):
-        self.driver.find_element("xpath", "//input[@id='gender-female']").click()
+        self.driver.find_element("xpath", "//input[@id='gender-male']").click()
 
     def name(self):
         # imported from testdata file

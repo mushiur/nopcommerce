@@ -5,6 +5,7 @@ import unittest
 from pageObject.openBrowser import OpenBrowser
 from pageObject.register import Register
 from pageObject.login import Login
+from pageObject.search import Search
 
 
 class TestFullCycle(unittest.TestCase):
@@ -35,6 +36,10 @@ class TestFullCycle(unittest.TestCase):
         log.log_email()
         log.log_password()
         log.confirmLog()
+
+    def test_4(self):
+        search = Search(self.x)
+        search.search_box()
 
     if __name__ == '__main__':
         unittest.main()
