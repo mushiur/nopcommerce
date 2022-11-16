@@ -7,10 +7,10 @@ from pageObject.register import Register
 from pageObject.login import Login
 from pageObject.search import Search
 from pageObject.shoppingCart import shoppingCart
+from pageObject.checkout import checkout
 
 
 class TestFullCycle(unittest.TestCase):
-
     s = Service("../Driver/chromedriver.exe")
     x = webdriver.Chrome(service=s)
 
@@ -48,6 +48,12 @@ class TestFullCycle(unittest.TestCase):
         cart.enter_text()
         cart.add_cart()
         cart.shopping_cart()
+
+    def test_6(self):
+        check_out = checkout(self.x)
+        check_out.checkout_button()
+        check_out.billing_page()
+        check_out.checkout_page()
 
     if __name__ == '__main__':
         unittest.main()
