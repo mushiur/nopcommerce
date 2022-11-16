@@ -10,3 +10,7 @@ class Search:
         element.click()
         element.send_keys(TestData.searchData.productName)
         element.submit()
+
+    def choose_product(self):
+        self.driver.find_element("xpath", "//a[normalize-space()='Custom T-Shirt']").click()
+

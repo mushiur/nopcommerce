@@ -40,6 +40,7 @@ class TestFullCycle(unittest.TestCase):
     def test_4(self):
         search = Search(self.x)
         search.search_box()
+        search.choose_product()
 
     if __name__ == '__main__':
         unittest.main()
