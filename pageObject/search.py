@@ -1,4 +1,4 @@
-import TestData.searchData
+import testData.searchData
 
 
 class Search:
@@ -8,7 +8,7 @@ class Search:
     def search_box(self):
         element = self.driver.find_element("id", "small-searchterms")
         element.click()
-        element.send_keys(TestData.searchData.productName)
+        element.send_keys(testData.searchData.productName)
         element.submit()
 
     def choose_product(self):

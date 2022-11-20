@@ -1,9 +1,9 @@
 import time
 
-import TestData.checkoutData
+import testData.checkoutData
 
 
-class checkout:
+class CheckOut:
     def __init__(self, driver):
         self.driver = driver
 
@@ -14,23 +14,23 @@ class checkout:
     def billing_page(self):
         country = self.driver.find_element("xpath", "//select[@id='BillingNewAddress_CountryId']")
         country.click()
-        country.send_keys(TestData.checkoutData.country)
+        country.send_keys(testData.checkoutData.country)
 
         city = self.driver.find_element("xpath", "//input[@id='BillingNewAddress_City']")
         city.click()
-        city.send_keys(TestData.checkoutData.city)
+        city.send_keys(testData.checkoutData.city)
 
         address_1 = self.driver.find_element("xpath", "//input[@id='BillingNewAddress_Address1']")
         address_1.click()
-        address_1.send_keys(TestData.checkoutData.Address1)
+        address_1.send_keys(testData.checkoutData.Address1)
 
         pos_code = self.driver.find_element("xpath", "//input[@id='BillingNewAddress_ZipPostalCode']")
         pos_code.click()
-        pos_code.send_keys(TestData.checkoutData.pos_code)
+        pos_code.send_keys(testData.checkoutData.pos_code)
 
         phn = self.driver.find_element("xpath", "//input[@id='BillingNewAddress_PhoneNumber']")
         phn.click()
-        phn.send_keys(TestData.checkoutData.phn_num)
+        phn.send_keys(testData.checkoutData.phn_num)
 
         cntnue = self.driver.find_element("xpath", "//*[@id='billing-buttons-container']/button[4]")
         cntnue.click()

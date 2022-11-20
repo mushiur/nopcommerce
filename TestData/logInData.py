@@ -1,7 +1,7 @@
 # loginEmail
-import TestData.registerData
+import testData.registerData
 
-loginEmail = TestData.registerData.email
+loginEmail = testData.registerData.email
 
 # login password
 loginPassword = "Robi@123"
