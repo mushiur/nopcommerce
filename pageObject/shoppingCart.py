@@ -1,7 +1,7 @@
 import random
 
 
-class shoppingCart:
+class ShoppingCart:
     def __init__(self, driver):
         self.driver = driver
 
