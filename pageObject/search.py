@@ -1,3 +1,4 @@
+import locators
 import testData.searchData
 
 
@@ -6,11 +7,11 @@ class Search:
         self.driver = driver
 
     def search_box(self):
-        element = self.driver.find_element("id", "small-searchterms")
+        element = self.driver.find_element("id", locators.search_field)
         element.click()
         element.send_keys(testData.searchData.productName)
         element.submit()
 
     def choose_product(self):
-        self.driver.find_element("xpath", "//a[normalize-space()='Custom T-Shirt']").click()
+        self.driver.find_element("xpath", locators.choose_product).click()
 

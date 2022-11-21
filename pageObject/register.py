@@ -11,33 +11,33 @@ class Register:
         self.driver.find_element("xpath", locators.registration).click()
 
     def gender(self):
-        self.driver.find_element("xpath", "//input[@id='gender-male']").click()
+        self.driver.find_element("xpath", locators.gender).click()
 
     def name(self):
         # imported from testdata file
-        self.driver.find_element("id", "FirstName").send_keys(testData.registerData.firstName)
-        self.driver.find_element("id", "LastName").send_keys(testData.registerData.lastName)
+        self.driver.find_element("id", locators.first_name).send_keys(testData.registerData.firstName)
+        self.driver.find_element("id", locators.last_name ).send_keys(testData.registerData.lastName)
 
     def dob(self):
         # imported from testdata file
-        self.driver.find_element("name", "DateOfBirthDay").send_keys(testData.registerData.date)
-        self.driver.find_element("name", "DateOfBirthMonth").send_keys(testData.registerData.month)
-        self.driver.find_element("name", "DateOfBirthYear").send_keys(testData.registerData.year)
+        self.driver.find_element("name", locators.birth_day).send_keys(testData.registerData.date)
+        self.driver.find_element("name", locators.birth_month).send_keys(testData.registerData.month)
+        self.driver.find_element("name", locators.birth_year).send_keys(testData.registerData.year)
 
     def email(self):
-        self.driver.find_element("id", "Email").send_keys(testData.registerData.email)
+        self.driver.find_element("id", locators.email).send_keys(testData.registerData.email)
 
     def company(self):
-        self.driver.find_element("id", "Company").send_keys(testData.registerData.company)
+        self.driver.find_element("id", locators.company_box).send_keys(testData.registerData.company)
 
     def password(self):
-        self.driver.find_element("id", "Password").send_keys(testData.registerData.password)
+        self.driver.find_element("id", locators.password_field).send_keys(testData.registerData.password)
 
-    def Confirmpass(self):
-        self.driver.find_element("id", "ConfirmPassword").send_keys(testData.registerData.password)
+    def confirmPass(self):
+        self.driver.find_element("id", locators.confirm_pass_field).send_keys(testData.registerData.password)
 
-    def RegConfirm(self):
-        self.driver.find_element("xpath", "//button[@class= 'button-1 register-next-step-button']").click()
+    def regConfirm(self):
+        self.driver.find_element("xpath", locators.reg_confirm_field).click()
 
     def Logout(self):
-        self.driver.find_element("xpath", "//a[@class= 'ico-logout']").click()
+        self.driver.find_element("xpath", locators.log_out).click()

@@ -27,8 +27,8 @@ class TestFullCycle(unittest.TestCase):
         reg.email()
         reg.company()
         reg.password()
-        reg.Confirmpass()
-        reg.RegConfirm()
+        reg.confirmPass()
+        reg.regConfirm()
         reg.Logout()
 
     def test_3(self):
