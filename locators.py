@@ -1,1 +1,1 @@
-registration = "xpath", "//a[@class = 'ico-register']"
+registration = "//a[@class = 'ico-register']"

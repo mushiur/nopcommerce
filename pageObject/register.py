@@ -8,7 +8,7 @@ class Register:
         self.driver = driver
 
     def registration(self):
-        self.driver.find_element(self.locators.registration).click()
+        self.driver.find_element("xpath", locators.registration).click()
 
     def gender(self):
         self.driver.find_element("xpath", "//input[@id='gender-male']").click()
