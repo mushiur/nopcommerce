@@ -1,4 +1,5 @@
 import testData.registerData
+import locators
 
 
 class Register:
@@ -7,7 +8,7 @@ class Register:
         self.driver = driver
 
     def registration(self):
-        self.driver.find_element("xpath", "//a[@class = 'ico-register']").click()
+        self.driver.find_element(self.locators.registration).click()
 
     def gender(self):
         self.driver.find_element("xpath", "//input[@id='gender-male']").click()
